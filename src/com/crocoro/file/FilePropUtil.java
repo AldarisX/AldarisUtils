@@ -13,8 +13,8 @@ public class FilePropUtil {
      * @param file 文件
      * @return 文件大小的字符串 B,KB,MB,GB,TB
      */
-    public static String FormatFileSize(File file) {
-        return FormatFileSize(file.length());
+    public static String formatFileSize(File file) {
+        return formatFileSize(file.length());
     }
 
     /**
@@ -24,8 +24,8 @@ public class FilePropUtil {
      * @param format 文件格式 如: ".00",".000"
      * @return 文件大小的字符串 B,KB,MB,GB,TB
      */
-    public static String FormatFileSize(File file, String format) {
-        return FormatFileSize(file.length(), format);
+    public static String formatFileSize(File file, String format) {
+        return formatFileSize(file.length(), format);
     }
 
     /**
@@ -34,8 +34,8 @@ public class FilePropUtil {
      * @param size 文件大小
      * @return 文件大小的字符串 B,KB,MB,GB,TB
      */
-    public static String FormatFileSize(long size) {
-        return FormatFileSize(size, ".00");
+    public static String formatFileSize(long size) {
+        return formatFileSize(size, ".00");
     }
 
     /**
@@ -45,7 +45,7 @@ public class FilePropUtil {
      * @param format 文件格式 如: ".00",".000"
      * @return 文件大小的字符串 B,KB,MB,GB,TB
      */
-    public static String FormatFileSize(long size, String format) {
+    public static String formatFileSize(long size, String format) {
         DecimalFormat df = new DecimalFormat("#" + format);
         String fileSizeString;
         if (size == 0) {
